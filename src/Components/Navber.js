@@ -24,7 +24,7 @@ handleClicked=()=>{
           {Menuitems.map((item, index) => {
             return (
               <li key={index}>
-                <Link to="/" className={item.cName}>
+                <Link to={item.url} className={item.cName}>
                   <i className={item.icon}></i>
                   {item.title}
                 </Link>
