@@ -4,11 +4,11 @@ import "./Navber.css";
 import { Menuitems } from "./Menuitems";
 
 class Navber extends Component {
-//this for responsive navber toggle icon
-state={clicked:false};
-handleClicked=()=>{
-  this.setState({clicked : !this.state.clicked})
-}
+  //this for responsive navber toggle icon
+  state = { clicked: false };
+  handleClicked = () => {
+    this.setState({ clicked: !this.state.clicked });
+  };
 
   render() {
     return (
@@ -16,11 +16,12 @@ handleClicked=()=>{
         <h1 className="Navber-logo">Trippy</h1>
 
         <div className="menu-icon" onClick={this.handleClicked}>
-            <i className={this.state.clicked ? "fas fa-times" : "fas fa-bars"}></i>
+          <i
+            className={this.state.clicked ? "fas fa-times" : "fas fa-bars"}
+          ></i>
         </div>
 
-        <ul className={this.state.clicked ? 
-         "nav-menu active" : "nav-menu"}>
+        <ul className={this.state.clicked ? "nav-menu active" : "nav-menu"}>
           {Menuitems.map((item, index) => {
             return (
               <li key={index}>
